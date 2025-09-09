@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistral AI - L'IA de pointe. Entre vos mains.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a1b23;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #7cb342;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #7cb342;
+        }
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1a1b23, #2d3748);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .product-card h3 {
+            margin-bottom: 1rem;
+            color: #7cb342;
+        }
+        .product-card p {
+            color: #666;
+        }
+        footer {
+            background-color: #1a1b23;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #7cb342;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #6ba032;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Mistral AI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="code.html">Mistral Code</a></li>
+                <li><a href="compte.html">Mistral Compte</a></li>
+                <li><a href="reseaux.html">Mistral Réseaux</a></li>
+                <li><a href="voyage.html">Mistral Voyage</a></li>
+                <li><a href="api.html">Nos IA & API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>L'IA de pointe.<br>Entre vos mains.</h1>
+    </section>
+
+    <main class="container">
+        <section class="products">
+            <div class="product-card">
+                <h3>Mistral Code</h3>
+                <p>L'assistant IA pour développeurs : générez, optimisez et déboguez du code en un clin d'œil.</p>
+                <a href="code.html" class="btn">En savoir plus</a>
+            </div>
+            <div class="product-card">
+                <h3>Mistral Compte</h3>
+                <p>Gérez vos projets, vos données et vos accès en toute sécurité.</p>
+                <a href="compte.html" class="btn">En savoir plus</a>
+            </div>
+            <div class="product-card">
+                <h3>Mistral Réseaux</h3>
+                <p>Intégrez Mistral à vos plateformes sociales pour une expérience unique et personnalisée.</p>
+                <a href="reseaux.html" class="btn">En savoir plus</a>
+            </div>
+            <div class="product-card">
+                <h3>Mistral Voyage</h3>
+                <p>Planifiez, organisez et voyagez malin grâce à notre IA dédiée.</p>
+                <a href="voyage.html" class="btn">En savoir plus</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mistral AI. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
