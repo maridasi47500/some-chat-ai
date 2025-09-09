@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multral: AI-Powered Social Login & Posting</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fafafa;
+      color: #333;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .ai-post {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #e9e9e9;
+      border-radius: 4px;
+    }
+    .code {
+      background: #000;
+      color: #0f0;
+      padding: 1rem;
+      font-size: 0.875rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Multral</h1>
+    <p>No OmniAuth. Just AI + your UIDs.</p>
+  </div>
+
+  <div>
+    <button class="login-btn" onclick="loginWith('facebook')">Login with Facebook (AI)</button>
+    <button class="login-btn" onclick="loginWith('linkedin')">Login with LinkedIn (AI)</button>
+  </div>
+
+  <div class="ai-post" id="aiPost" style="display: none;">
+    <h3>Ask AI to post for you:</h3>
+    <input type="text" id="postContent" placeholder="What should AI post?" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;">
+    <button onclick="aiPost()" style="width: 100%; padding: 0.5rem; background: #0066cc; color: #fff; border: none;">Publish with AI</button>
+  </div>
+
+  <div class="code">
+    <p>// Your User model (Rails example):</p>
+    <pre>
+class User &lt; ApplicationRecord
+  def self.from_multral(auth)
+    where(provider: auth[:provider], uid: auth[:uid]).first_or_create do |user|
+      user.email = auth[:info][:email]
+      user.password = SecureRandom.hex(16) # AI never sees your password
+    end
+  end
+
+  def publish_with_ai(content)
+    if facebook_uid.present?
+      # AI posts to Facebook using facebook_uid
+    end
+    if linkedin_uid.present?
+      # AI posts to LinkedIn using linkedin_uid
+    end
+  end
+end
+    </pre>
+  </div>
+
+  <script>
+    function loginWith(provider) {
+      // Simulate AI login
+      alert(`AI logged you in with ${provider} UID (no OmniAuth!)`);
+      document.getElementById('aiPost').style.display = 'block';
+    }
+
+    function aiPost() {
+      const content = document.getElementById('postContent').value;
+      if (content) {
+        alert(`AI posted: "${content}" to your connected accounts!`);
+      }
+    }
+  </script>
+</body>
+</html>
