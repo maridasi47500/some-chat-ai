@@ -1,0 +1,1 @@
+- a multi-page frontend for an AI product suite called “Mistral AI.” The repository provides landing, code assistant, API documentation, and social login demo pages, aimed at showcasing different ways users can interact with and integrate various specialized AI models.
