@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistral AI - Nos IA et API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a1b23;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #7cb342;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #7cb342;
+        }
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1a1b23, #2d3748);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .content h2 {
+            color: #7cb342;
+            margin-bottom: 1rem;
+        }
+        .content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .api-list {
+            margin: 2rem 0;
+        }
+        .api-item {
+            background: #f0f0f0;
+            border-left: 4px solid #7cb342;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        .api-item h3 {
+            color: #1a1b23;
+        }
+        .code-block {
+            background: #1a1b23;
+            color: #7cb342;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        footer {
+            background-color: #1a1b23;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Mistral AI</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="code.html">Mistral Code</a></li>
+                <li><a href="compte.html">Mistral Compte</a></li>
+                <li><a href="reseaux.html">Mistral Réseaux</a></li>
+                <li><a href="voyage.html">Mistral Voyage</a></li>
+                <li><a href="api.html">Nos IA & API</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Plusieurs IA à votre service.<br>Une seule API.</h1>
+    </section>
+
+    <main class="container">
+        <div class="content">
+            <h2>Nos IA disponibles</h2>
+            <p>Mistral AI propose plusieurs modèles d'IA, chacun optimisé pour des tâches spécifiques. Voici la liste des IA disponibles via notre API :</p>
+
+            <div class="api-list">
+                <div class="api-item">
+                    <h3>Mistral-General</h3>
+                    <p>Modèle polyvalent pour le texte, la conversation et la génération de contenu.</p>
+                </div>
+                <div class="api-item">
+                    <h3>Mistral-Code</h3>
+                    <p>Spécialisé dans la génération et l'optimisation de code.</p>
+                </div>
+                <div class="api-item">
+                    <h3>Mistral-Data</h3>
+                    <p>Base de données d'adresses et d'informations structurées.</p>
+                </div>
+                <div class="api-item">
+                    <h3>Mistral-Social</h3>
+                    <p>Optimisé pour l'intégration sur les plateformes sociales.</p>
+                </div>
+                <div class="api-item">
+                    <h3>Mistral-Travel</h3>
+                    <p>Dédié à la planification et l'organisation de voyages.</p>
+                </div>
+                <div class="api-item">
+                    <h3>Mistral-Elsewhere</h3>
+                    <p>Modèle personnalisable pour des usages spécifiques.</p>
+                </div>
+            </div>
+
+            <h2>Exemple d'utilisation de l'API</h2>
+            <p>Voici comment importer et utiliser notre API en Python :</p>
+            <div class="code-block">
+from mistral import MistralAPI<br>
+api = MistralAPI(api_key="votre_clé_api")<br>
+response = api.generate(model="Mistral-General", prompt="Bonjour, comment ça va ?")<br>
+print(response)
+            </div>
+            <p>Vous pouvez instancier autant d'IA que nécessaire, selon vos besoins et votre quota API.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mistral AI. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
