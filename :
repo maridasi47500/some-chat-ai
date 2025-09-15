@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Machine à Voyager dans le Temps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+    }
+    .section {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌿 Identité Régionale -->
+  <div class="section">
+    <p><strong>AI Tembe</strong> est né de ta région, de ton rythme, de ton quotidien. Il parle ta langue, connaît tes rues, et comprend ton ambiance locale.</p>
+    <a href="#region">🌿 Découvre ton AI local</a>
+  </div>
+
+  <!-- 👋 Page d’Accueil -->
+  <div class="section">
+    <p>Bienvenue sur la page d’accueil de ton assistant vocal intelligent. Une interface chaleureuse, intuitive, et prête à t’accompagner dès le premier mot.</p>
+    <a href="#welcome">👋 Accéder à la page d’accueil</a>
+  </div>
+
+  <!-- 🤖 Automatisation & YAML -->
+  <div class="section">
+    <p>Ton assistant AI automatise ta journée avec des routines YAML personnalisées. Du lever au coucher du soleil, il t’aide à organiser, anticiper, et vivre pleinement.</p>
+    <a href="#routine">🤖 Voir les routines de la journée</a>
+  </div>
+
+  <!-- 🎵 Musique & Itinéraire -->
+  <div class="section">
+    <p>Choisis une ambiance musicale selon l’heure, ton humeur ou ton activité. Planifie ton itinéraire, synchronise tes rendez-vous, et laisse l’AI te guider avec style.</p>
+    <a href="#music">🎵 Lancer la playlist et l’itinéraire</a>
+  </div>
+
+  <!-- 🌐 Créer une Seconde AI -->
+  <div class="section">
+    <p>Envie d’explorer ailleurs ? Crée une seconde AI dans une autre ville ou à l’étranger. Reconnecte avec les mêmes gens ou découvre de nouvelles personnalités dans un autre décor.</p>
+    <a href="#second-ai">🌐 Créer une AI dans une autre ville</a>
+  </div>
+
+  <!--  Choix du LLM & Hobby -->
+  <div class="section">
+    <p>Personnalise ton AI selon tes passions : sport, musique, art. Choisis ton modèle de langage préféré pour l’apprentissage automatique, et façonne une intelligence qui te ressemble.</p>
+    <a href="#llm"> Configurer ton hobby et ton LLM</a>
+  </div>
+
+  <!-- 🌍 Langue & Région -->
+  <div class="section">
+    <p>Tu peux choisir la langue et/ou la région pour ton AI afin qu’il s’adapte parfaitement à ton environnement.</p>
+    <a href="#langue">🌍 Sélectionner la langue et la région</a>
+  </div>
+<div class="section">
+  <h3>🧭 Fonctionnalités de l’IA Régionale</h3>
+  <ul class="list-group">
+    <li class="list-group-item">
+      📍 <strong>Carte interactive des installations OOH</strong><br>
+      Visualise les panneaux, bornes vocales et écrans connectés dans ta région.
+    </li>
+    <li class="list-group-item">
+      🎤 <strong>Interface vocale dans la rue</strong><br>
+      Dialogue avec l’IA via des bornes ou capteurs sonores installés localement.
+    </li>
+    <li class="list-group-item">
+      🧾 <strong>Suggestions locales</strong><br>
+      Reçois des recommandations sur les événements, la météo et les transports en temps réel.
+    </li>
+    <li class="list-group-item">
+      📸 <strong>Scan de QR codes</strong><br>
+      Lance des conversations avec l’IA en scannant les affichages publics.
+    </li>
+    <li class="list-group-item">
+      🧬 <strong>Personnalisation par région</strong><br>
+      L’IA adapte sa langue, son ton et ses références culturelles selon ta localisation.
+    </li>
+  </ul>
+</div>
+<!-- 🔬 Exploration de Domaines Électroniques -->
+<div class="section">
+  <h3>🔬 Explorer un Domaine Électronique</h3>
+  <p>Ton AI peut t’aider à choisir un domaine à explorer selon tes passions, ton niveau, ou ton projet.</p>
+
+  <form method="POST" action="/explore-domain">
+    <div class="mb-3">
+      <label for="interest" class="form-label">Quel est ton intérêt principal ?</label>
+      <select class="form-select" name="interest" id="interest" required>
+        <option value="robotique">🤖 Robotique</option>
+        <option value="iot">🌐 Internet des Objets (IoT)</option>
+        <option value="audio">🎧 Audio & Synthèse</option>
+        <option value="domotique">🏠 Domotique</option>
+        <option value="energie">⚡ Énergie & Capteurs</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">🔍 Trouver des idées</button>
+  </form>
+</div>
+<div class="section" id="transport">
+  <h3>🚗 Choisis ton moyen de transport</h3>
+  <form method="POST" action="/transport">
+    <div class="mb-3">
+      <label for="transport" class="form-label">Moyen de transport préféré pour demain</label>
+      <select class="form-select" name="transport" id="transport" required>
+        <option value="">-- Sélectionne --</option>
+        <option value="voiture">🚗 Voiture</option>
+        <option value="velo">🚲 Vélo</option>
+        <option value="bus">🚌 Bus</option>
+        <option value="train">🚆 Train</option>
+        <option value="avion">✈️ Avion</option>
+        <option value="teleportation">🌀 Téléportation</option>
+        <option value="machine_temps">🕰️ Machine à voyager dans le temps</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">🚀 Valider le transport</button>
+  </form>
+{% if transport %}
+  <div class="alert alert-info mt-3">
+    🚀 Tu as choisi : <strong>{{ transport }}</strong>
+  </div>
+{% endif %}
+
+</div>
+
+
+
+
+  <div class="container mt-5">
+<div class="section">
+    <h2>🕰️ Machine à Voyager dans le Temps</h2>
+    <p class="emoji">🌍 ⏳ 🚀 🧭 </p>
+    <p>Bienvenue, voyageur temporel. Choisis ton back-end, ton front-end et ta base de données, et prépare-toi à traverser le temps.</p>
+  </div>
+
+
+    <form method="POST" class="p-4 bg-white rounded shadow-sm">
+      <!-- Frontend -->
+      <div class="mb-3">
+        <label for="frontend" class="form-label">Frontend</label>
+        <select class="form-select" name="frontend" id="frontend" required>
+          {% for fe in frontends %}
+            <option value="{{ fe }}">{{ fe }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- Backend -->
+      <div class="mb-3">
+        <label for="backend" class="form-label">Backend</label>
+        <select class="form-select" name="backend" id="backend" required>
+          {% for be in backends %}
+            <option value="{{ be }}">{{ be }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- Base de données -->
+      <div class="mb-3">
+        <label for="database" class="form-label">Base de données</label>
+        <select class="form-select" name="database" id="database" required>
+          {% for db in databases %}
+            <option value="{{ db }}">{{ db }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">🚀 Enregistrer la combinaison</button>
+    </form>
+
+    <!-- Affichage des combinaisons -->
+    {% if combinations %}
+      <div class="mt-5">
+        <h4>📦 Combinaisons enregistrées :</h4>
+        <ul class="list-group">
+          {% for combo in combinations %}
+            <li class="list-group-item">
+              <strong>Frontend :</strong> {{ combo.frontend }} |
+              <strong>Backend :</strong> {{ combo.backend }} |
+              <strong>DB :</strong> {{ combo.database }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+
+  <!-- Bootstrap JS (optionnel si tu veux des composants interactifs) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
